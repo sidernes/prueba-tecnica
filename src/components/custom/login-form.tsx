@@ -53,7 +53,7 @@ export function LoginForm() {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className="max-w-md mx-auto mt-20 p-6 border rounded space-y-4"
+			className="max-w-md mx-auto p-6 border rounded space-y-4"
 		>
 			{error && <p className="text-red-500">{error}</p>}
 			<div>
