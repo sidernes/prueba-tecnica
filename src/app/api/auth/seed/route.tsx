@@ -23,12 +23,12 @@ async function doSeed() {
 }
 
 export async function POST() {
-	if (process.env.NODE_ENV !== "development") {
-		return NextResponse.json(
-			{ error: "Prohibido en producción" },
-			{ status: 403 }
-		);
-	}
+	// if (process.env.NODE_ENV !== "development") {
+	// 	return NextResponse.json(
+	// 		{ error: "Prohibido en producción" },
+	// 		{ status: 403 }
+	// 	);
+	// }
 	try {
 		await doSeed();
 		return NextResponse.json({ message: "Seed completado" });
