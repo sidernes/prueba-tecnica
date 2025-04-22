@@ -60,14 +60,16 @@ function Calendar({
 				day_hidden: "invisible",
 				...classNames,
 			}}
-			components={{
-				IconLeft: ({ className, ...props }) => (
-					<ChevronLeft className={cn("h-4 w-4", className)} {...props} />
-				),
-				IconRight: ({ className, ...props }) => (
-					<ChevronRight className={cn("h-4 w-4", className)} {...props} />
-				),
-			}}
+			components={
+				{
+					IconLeft: ({ className, ...props }) => (
+						<ChevronLeft className={cn("h-4 w-4", className)} {...props} />
+					),
+					IconRight: ({ className, ...props }) => (
+						<ChevronRight className={cn("h-4 w-4", className)} {...props} />
+					),
+				} as unknown as Partial<DayPickerProps["components"]>
+			}
 			{...props}
 		/>
 	);
