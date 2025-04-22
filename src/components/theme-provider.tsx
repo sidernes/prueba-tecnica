@@ -11,12 +11,14 @@ export function ThemeProvider({
 }: React.ComponentProps<typeof NextThemesProvider>) {
 	const [mounted, setMounted] = React.useState(false);
 
-	React.useLayoutEffect(() => {
+	React.useEffect(() => {
 		setMounted(true);
 	}, []);
 
-	// Evitar renderizado hasta que esté montado
-	if (!mounted) return <>{children}</>;
-
-	return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+	return (
+		<NextThemesProvider {...props}>
+			{/* Montamos siempre el provider, pero solo renderizamos hijos una vez hidratados */}
+			{mounted ? children : null}
+		</NextThemesProvider>
+	);
 }
