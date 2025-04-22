@@ -3,7 +3,15 @@
 "use client";
 
 import * as React from "react";
-import { Users } from "lucide-react";
+import {
+	CodeXml,
+	CopyPlus,
+	Database,
+	FileKey,
+	Loader,
+	RefreshCw,
+	Users,
+} from "lucide-react";
 
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";
@@ -23,43 +31,43 @@ const data = {
 		{
 			title: "Ejercicio 1.1",
 			url: "/modules/ejercicio1",
-			icon: Users,
+			icon: CodeXml,
 			isActive: true,
 		},
 		{
 			title: "Ejercicio 1.2",
 			url: "/modules/ejercicio2",
-			icon: Users,
+			icon: CodeXml,
 			isActive: true,
 		},
 		{
 			title: "Ejercicio 2.1",
 			url: "/modules/ejercicio3",
-			icon: Users,
+			icon: CopyPlus,
 			isActive: true,
 		},
 		{
 			title: "Ejercicio 2.2",
 			url: "/modules/ejercicio4",
-			icon: Users,
+			icon: FileKey,
 			isActive: true,
 		},
 		{
 			title: "Ejercicio 2.3",
 			url: "/modules/ejercicio5",
-			icon: Users,
+			icon: RefreshCw,
 			isActive: true,
 		},
 		{
 			title: "Ejercicio 2.4",
 			url: "/modules/ejercicio6",
-			icon: Users,
+			icon: Loader,
 			isActive: true,
 		},
 		{
 			title: "Ejercicio 3.1",
 			url: "/modules/ejercicio7",
-			icon: Users,
+			icon: Database,
 			isActive: true,
 		},
 	],
